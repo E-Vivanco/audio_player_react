@@ -55,7 +55,7 @@ const Controles = ({setplaying,isplaying,songs,setactivasong,songurl,activasong}
   
   return (
     <>
-    <div className='botones d-flex flex-row'>
+    <div className='justify-content-center botones d-flex flex-row'>
       
             <button className="btn btn-dark m-2" onClick={() => avanzaBoton('backward')}><i className="fa-solid fa-backward"></i></button>
             <button className="btn btn-dark m-2" onClick={PlayBoton}>{isplaying ? <i className="fa-solid fa-pause"></i> : <i className="fa-solid fa-play"></i>}</button>
