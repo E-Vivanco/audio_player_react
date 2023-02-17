@@ -37,9 +37,7 @@ useEffect(() => {     //hooks que realiza la consulta fetch y setea la data en s
                 <table>
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th>Titulo</th>
-                            <th>URL</th>
+                            <th># Titulo-De-Cancion -------  URL</th>
                         </tr>
                     </thead>
                     <tbody>
