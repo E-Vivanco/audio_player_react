@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Songs.css';
+import PropType from 'prop-types';
 import { useRef } from 'react';
 //import Tabla from './Tabla';
 
@@ -39,5 +40,10 @@ const Songs = ({songs,songurl,setactivasong,setplaying}) => {
     </div>
   );
 }
-
+Songs.prototype={
+  audioRef: PropType.object,
+  posRef: PropType.object,
+  cancionClick: PropType.function,
+  
+}
 export default Songs;

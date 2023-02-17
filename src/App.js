@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import Controles from './components/Controles';
 import Songs from './components/Songs';
+import PropTypes from 'prop-types';
 import './index.css'
 
 function App () {
@@ -13,7 +14,7 @@ function App () {
  
   const songURL = "https://assets.breatheco.de/apis/sound/";
  
-useEffect(() => {     //hooks que realiza la consulta fetch y setea la data en setSongs
+  useEffect(() => {     //hooks que realiza la consulta fetch y setea la data en setSongs
   const recuperaSongs = async ()=>{
    try{
      const response =  await fetch("https://assets.breatheco.de/apis/sound/songs");
@@ -64,6 +65,14 @@ useEffect(() => {     //hooks que realiza la consulta fetch y setea la data en s
     </>
   );
 }
-
+App.prototype={
+  songs: PropTypes.array,
+  setSongs:PropTypes.array,
+  isPlaying:PropTypes.bool,
+  setPlaying:PropTypes.bool,
+  activaSong:PropTypes.bool,
+  setactivaSong:PropTypes.bool,
+  songURL:PropTypes.string,
+}
 export default App;
 

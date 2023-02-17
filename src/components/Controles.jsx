@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Controles.css';
+import PropType from 'prop-types';
 import { useRef} from 'react';
 
 const Controles = ({setplaying,isplaying,songs,setactivasong,songurl,activasong}) => {
@@ -66,5 +67,10 @@ const Controles = ({setplaying,isplaying,songs,setactivasong,songurl,activasong}
         </>
   );
 }
-
+Controles.prototype={
+  audioRef: PropType.object,
+  posRef: PropType.object,
+  avanzaBoton:PropType.function,
+  PlayBoton: PropType.function,
+}
 export default Controles;
